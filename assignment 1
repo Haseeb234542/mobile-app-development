@@ -1,0 +1,38 @@
+void main() {
+  // Example: name and age
+  String name = "Ali";
+  int age = 20;
+
+  if (age < 18) {
+    print("Sorry $name, you are not eligible to register.");
+    return;
+  }
+
+  print("Welcome $name! You are eligible to register.");
+
+  // Example numbers (as if user entered them)
+  List<int> numbers = [12, 7, 25, 8, 3];
+
+  print("Numbers entered: $numbers");
+
+  int evenSum = 0;
+  int oddSum = 0;
+  int largest = numbers[0];
+  int smallest = numbers[0];
+
+  for (int num in numbers) {
+    if (num % 2 == 0) {
+      evenSum += num;
+    } else {
+      oddSum += num;
+    }
+
+    if (num > largest) largest = num;
+    if (num < smallest) smallest = num;
+  }
+
+  print("Sum of even numbers: $evenSum");
+  print("Sum of odd numbers: $oddSum");
+  print("Largest number: $largest");
+  print("Smallest number: $smallest");
+}
